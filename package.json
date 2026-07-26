@@ -1,0 +1,17 @@
+{
+  "name": "forthpoint-data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Excel-to-JSON data pipeline for ForthPoint Terminal",
+  "scripts": {
+    "parse": "python3 scripts/numbers-parser.py",
+    "generate": "node scripts/generate-json.js",
+    "validate": "node scripts/validate-data.js",
+    "build:data": "npm run parse && npm run generate && npm run validate"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
